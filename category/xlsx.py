@@ -1,5 +1,8 @@
 import xlsxwriter
-from category import array_ageless, array_aksessury_image, array_bioslimming, array_clear_cell, array_ibeauty, array_iluma, array_image_md, array_imask, array_irescue, array_itrial, array_nabory_image, array_o2_lift, array_ormedic, array_prevention, array_the_max, array_vital_c
+from category import array_ageless, array_aksessury_image, array_bioslimming,\
+    array_clear_cell, array_ibeauty, array_iluma, array_image_md, array_imask,\
+    array_irescue, array_itrial, array_nabory_image, array_o2_lift, array_ormedic, \
+    array_prevention, array_the_max, array_vital_c
 
 
 def writer(ageless, aksessur, bioslimming, clear, ibeauty, iluma, image_md, imask, irescue, itrial, nabory, o2, ormedic, prevention, the_max, vital_c):

@@ -23,11 +23,16 @@ def array_o2_lift():
         sleep(1)
         soup = BeautifulSoup(response.text, 'lxml')
         data = soup.find('main', class_='main-content mobile-fixed')
-        name = data.find('div', class_="product-name").text
-        price = data.find('div', class_='product-prices').text
-        description = data.find('div', class_='description').text
+        names = data.find('div', class_="product-name").text
+        name = names.strip('\n')
+        prices = data.find('div', class_='product-prices').text
+        price = int(prices.replace('₽', '').strip('\n').strip().replace(' ', ''))
+        descriptions = data.find('div', class_='description').text
+        description = descriptions.strip('\n').strip()
         url_img = 'https://image-skincare.ru' + data.find('img').get('src')
-        add_card = data.find('div', class_="stocks").text
+        add_cards = data.find('div', class_="stocks").text
+        add_card = add_cards.strip('\n')
+
         yield name, price, description, url_img, add_card
 
 

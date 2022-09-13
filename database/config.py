@@ -1,0 +1,1 @@
+DB_PATH = "postgresql+psycopg2://postgres:9830@localhost:5432/cosmetic_dj_db"
